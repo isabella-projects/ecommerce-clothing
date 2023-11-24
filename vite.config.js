@@ -6,6 +6,7 @@ export default defineConfig({
     server: {
         open: "ecommerce-clothing",
     },
-    base: "/ecommerce-clothing",
+    // TODO: Add 'ecommerce-clothing' as base for 'base' before deploying to GitHub Pages
+    base: "/",
     plugins: [react()],
 });
