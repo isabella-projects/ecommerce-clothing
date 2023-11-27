@@ -1,7 +1,8 @@
-import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 import Preloader from "./components/preloader/preloader.component";
+
 import Home from "./routes/home/home.component";
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
     }, []);
 
     return (
-        <div>
+        <>
             {preloader ? (
                 <Preloader />
             ) : (
@@ -24,7 +25,7 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                 </Routes>
             )}
-        </div>
+        </>
     );
 };
 

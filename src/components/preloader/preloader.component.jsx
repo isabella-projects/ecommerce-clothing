@@ -3,7 +3,12 @@ import "./preloader.styles.scss";
 const Preloader = () => {
     return (
         <div className="preloader">
-            <div className="loader"></div>
+            <span className="loader">
+                <img
+                    src="/src/assets/img/logo-preloader.png"
+                    alt="Preloader Logo"
+                />
+            </span>
         </div>
     );
 };
