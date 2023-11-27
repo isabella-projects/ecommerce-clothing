@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 import Directory from "../../components/directory/directory.component";
 
 const Home = () => {
@@ -29,7 +31,12 @@ const Home = () => {
         },
     ];
 
-    return <Directory categories={categories} />;
+    return (
+        <>
+            <Outlet />
+            <Directory categories={categories} />;
+        </>
+    );
 };
 
 export default Home;

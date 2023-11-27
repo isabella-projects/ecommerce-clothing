@@ -1,12 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
 
-// https://vitejs.dev/config/
 export default defineConfig({
     server: {
-        open: "ecommerce-clothing",
+        open: "/",
     },
     // TODO: Add 'ecommerce-clothing' as base for 'base' before deploying to GitHub Pages
     base: "/",
-    plugins: [react()],
+    plugins: [react(), svgr()],
 });
