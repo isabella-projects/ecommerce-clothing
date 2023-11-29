@@ -22,6 +22,8 @@
         justify-content: flex-end;
 
         .nav-link {
+            color: var(--primary-color);
+            font-size: clamp(18px, 7vw - 1.5rem, 22px);
             padding: 10px 15px;
             cursor: pointer;
         }
