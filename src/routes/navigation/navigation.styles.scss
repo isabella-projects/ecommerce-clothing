@@ -1,19 +1,17 @@
 .navigation {
-    height: 80px;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: var(--mg-side) 0 2.325rem var(--mg-side);
+    margin-bottom: calc(var(--mg-nav) + 0.625rem);
 
     .logo-container {
         height: 100%;
-        width: 80px;
-
-        .logo {
-            height: 100%;
-            width: 100%;
-            border-radius: 50%;
-        }
+        width: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: var(--mg-nav);
     }
 
     .nav-links-container {
@@ -22,7 +20,6 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin-right: var(--mg-side);
 
         .nav-link {
             padding: 10px 15px;

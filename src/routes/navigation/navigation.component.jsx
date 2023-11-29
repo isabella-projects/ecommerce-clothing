@@ -1,16 +1,15 @@
 import { Outlet, Link } from "react-router-dom";
 
-// import CrwnLogo from "../../assets/img/crown.svg?react";
+import CrwnLogo from "../../assets/img/crown.svg?react";
 
 import "./navigation.styles.scss";
-import firmLogo from "../../assets/img/perfect-color.jpg";
 
 const Navigation = () => {
     return (
         <>
             <div className="navigation">
                 <Link className="logo-container" to="/">
-                    <img className="logo" src={firmLogo} alt="Firm Logo" />
+                    <CrwnLogo className="logo" />
                 </Link>
                 <div className="nav-links-container">
                     <Link className="nav-link" to="/shop">
