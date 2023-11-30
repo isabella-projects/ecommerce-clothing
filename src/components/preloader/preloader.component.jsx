@@ -5,7 +5,7 @@ const Preloader = () => {
         <div className="preloader">
             <span className="loader">
                 <img
-                    src="/src/assets/img/logo-preloader.png"
+                    src="../../assets/img/logo-preloader.png"
                     alt="Preloader Logo"
                 />
             </span>
