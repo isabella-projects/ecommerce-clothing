@@ -1,10 +1,11 @@
 import "./sign-card.styles.scss";
 
-const SignCard = ({ onGoogleSignIn, onFacebookSignIn }) => {
+const SignCard = ({ onGoogleSignIn }) => {
     return (
         <div className="card-container">
-            <button onClick={onGoogleSignIn}>Sign In with Google</button>
-            <button onClick={onFacebookSignIn}>Sign In with Facebook</button>
+            <button className="btn-google" onClick={onGoogleSignIn}>
+                Login with Google
+            </button>
         </div>
     );
 };

@@ -9,9 +9,15 @@ const SignIn = () => {
     const logGoogleUser = async () => {
         try {
             const { user } = await signInWithGooglePopup();
+            console.log(user);
+
             const userDocRef = await createUserDocumentFromAuth(user);
+            console.log(userDocRef);
         } catch (error) {
-            console.error("Error has occured during login session: ", error);
+            console.error(
+                "Error has occured during google login session: ",
+                error
+            );
         }
     };
 

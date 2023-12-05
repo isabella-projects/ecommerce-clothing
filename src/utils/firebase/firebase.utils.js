@@ -13,13 +13,13 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 
+export const auth = getAuth(firebaseApp);
+auth.useDeviceLanguage();
+
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({
     prompt: "select_account",
 });
-
-export const auth = getAuth();
-auth.useDeviceLanguage();
 
 // prettier-ignore
 export const signInWithGooglePopup = () => 
@@ -31,9 +31,9 @@ export const createUserDocumentFromAuth = async (userAuth) => {
     const userDocRef = doc(db, "users", userAuth.uid);
     const userSnapshot = await getDoc(userDocRef);
 
-    // console.log(userDocRef);
-    // console.log(userSnapshot);
-    // console.log(userSnapshot.exists());
+    console.log(userDocRef);
+    console.log(userSnapshot);
+    console.log(userSnapshot.exists());
 
     if (!userSnapshot.exists()) {
         const { displayName, email } = userAuth;
