@@ -18,6 +18,7 @@
     <img src="https://github.com/devicons/devicon/blob/master/icons/graphql/graphql-plain.svg" title="GraphQL" alt="GraphQL" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/jest/jest-plain.svg" title="Jest" alt="Jest" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" title="Git" alt="Git" width="45" height="45"/>&nbsp;
+    <img src="https://github.com/devicons/devicon/blob/master/icons/vitejs/vitejs-original.svg" title="ViteJS" alt="ViteJS" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/npm/npm-original-wordmark.svg" title="npm" alt="npm" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="VSCode" alt="VSCode"       width="45" height="45"/>
 </div>
@@ -36,14 +37,14 @@
   cd ecommerce-clothing
 ```
 
-**Install dependencies**
+**Install project dependencies**
 
 ```bash
   npm install
 ```
 
-**Start the server**
+**Start the Vite development server**
 
 ```bash
-  npm run start
+  npm run dev
 ```
