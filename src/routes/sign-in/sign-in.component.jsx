@@ -1,9 +1,7 @@
-import {
-    signInWithGooglePopup,
-    createUserDocumentFromAuth,
-} from "../../utils/firebase/firebase.utils";
+import { signInWithGooglePopup, createUserDocumentFromAuth } from '../../utils/firebase/firebase.utils';
 
-import SignCard from "../../components/sign-card/sign-card.component";
+import SignButton from '../../components/sign-button/sign-button.component';
+import SignUpForm from '../../components/sign-form/sign-form.component';
 
 const SignIn = () => {
     const logGoogleUser = async () => {
@@ -14,16 +12,14 @@ const SignIn = () => {
             const userDocRef = await createUserDocumentFromAuth(user);
             console.log(userDocRef);
         } catch (error) {
-            console.error(
-                "Error has occured during google login session: ",
-                error
-            );
+            console.error('Error has occured during google login session: ', error);
         }
     };
 
     return (
         <>
-            <SignCard onGoogleSignIn={logGoogleUser} />
+            <SignButton signIn={logGoogleUser} buttonText="Login with Google Popup" />
+            <SignUpForm />
         </>
     );
 };
