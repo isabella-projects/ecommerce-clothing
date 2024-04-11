@@ -11,7 +11,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: var(--mg-nav);
+        margin-left: calc(var(--mg-nav) + 1.725rem);
     }
 
     .nav-links-container {
@@ -21,7 +21,7 @@
         align-items: center;
         justify-content: flex-end;
         gap: 1.325rem;
-        margin-right: var(--mg-nav);
+        margin-right: calc(var(--mg-nav) + 1.725rem);
 
         .nav-link {
             color: var(--primary-color);

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './sign-form.styles.scss';
+import './sign-up-form.styles.scss';
 
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
@@ -75,6 +75,7 @@ const SignUpForm = () => {
                 />
                 <FormInput
                     label="Password"
+                    type="password"
                     required
                     onChange={handleChange}
                     autoComplete="new-password"
@@ -83,6 +84,7 @@ const SignUpForm = () => {
                 />
                 <FormInput
                     label="Confirm Password"
+                    type="password"
                     required
                     onChange={handleChange}
                     autoComplete="new-password"
