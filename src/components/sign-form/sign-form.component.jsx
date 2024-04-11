@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import './sign-form.styles.scss';
+
+import FormInput from '../form-input/form-input.component';
+import Button from '../button/button.component';
 
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from '../../utils/firebase/firebase.utils';
 
@@ -48,28 +52,37 @@ const SignUpForm = () => {
     };
 
     return (
-        <>
-            <h1>Sign Up with your E-Mail and Password</h1>
+        <div className="sign-up-container">
+            <h2>Don't have an account?</h2>
+            <span>Sign Up with your E-Mail and Password</span>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="">Display Name</label>
-                <input type="text" required onChange={handleChange} name="displayName" value={displayName} />
-
-                <label htmlFor="">E-Mail</label>
-                <input type="email" required onChange={handleChange} autoComplete="email" name="email" value={email} />
-
-                <label htmlFor="">Password</label>
-                <input
-                    type="password"
+                <FormInput
+                    label="Display Name"
+                    type="text"
+                    required
+                    onChange={handleChange}
+                    name="displayName"
+                    value={displayName}
+                />
+                <FormInput
+                    label="E-Mail"
+                    type="email"
+                    required
+                    onChange={handleChange}
+                    autoComplete="email"
+                    name="email"
+                    value={email}
+                />
+                <FormInput
+                    label="Password"
                     required
                     onChange={handleChange}
                     autoComplete="new-password"
                     name="password"
                     value={password}
                 />
-
-                <label htmlFor="">Confirm Password</label>
-                <input
-                    type="password"
+                <FormInput
+                    label="Confirm Password"
                     required
                     onChange={handleChange}
                     autoComplete="new-password"
@@ -77,9 +90,9 @@ const SignUpForm = () => {
                     value={confirmPassword}
                 />
 
-                <button type="submit">Sign Up</button>
+                <Button type="submit">Sign Up</Button>
             </form>
-        </>
+        </div>
     );
 };
 
