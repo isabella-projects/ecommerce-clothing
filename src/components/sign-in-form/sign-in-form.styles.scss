@@ -7,8 +7,15 @@
         margin: 10px 0;
     }
 
-    .buttons-container {
+    .choose {
+        text-align: center;
+        font-size: 1.275rem;
+    }
+
+    .google-sign-in {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        gap: .725rem;
     }
 }

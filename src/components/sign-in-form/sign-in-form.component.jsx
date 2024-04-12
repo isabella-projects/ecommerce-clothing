@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import './sign-in-form.styles.scss';
 
 import FormInput from '../form-input/form-input.component';
@@ -79,12 +80,12 @@ const SignInForm = () => {
                     name="password"
                     value={password}
                 />
-                <div className="buttons-container">
-                    <Button type="submit">Sign In</Button>
-                    <Button type="button" buttonType="google" onClick={signInWithGoogle}>
-                        Google Sign In
-                    </Button>
-                </div>
+                <Button type="submit">Sign In</Button>
+                <span className="choose">OR</span>
+
+                <Button type="button" buttonType="google" onClick={signInWithGoogle}>
+                    Sign In with Google
+                </Button>
             </form>
         </div>
     );

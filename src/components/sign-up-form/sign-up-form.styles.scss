@@ -10,23 +10,7 @@
     form {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: repeat(4, 1fr);
-
-        .group {
-
-            input[type="password"]+input[type="email"] {
-                grid-row: 2;
-                background-color: green;
-            }
-
-            input[type="email"]+input[type="password"] {
-                grid-row: 3;
-            }
-        }
-
-
-        .buttons-container {
-            grid-row: 5;
-        }
+        align-items: center;
+        grid-template-rows: repeat(5, 1fr);
     }
 }
