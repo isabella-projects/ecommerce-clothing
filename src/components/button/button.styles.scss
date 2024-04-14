@@ -43,5 +43,12 @@
             color: white;
             border: none;
         }
+
+        &:active {
+            transition: none;
+            background-color: rgb(53, 50, 50);
+            color: white;
+            border: 2px solid rgb(247, 246, 246);
+        }
     }
 }
