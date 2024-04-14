@@ -26,10 +26,7 @@ const SignInForm = () => {
 
     const signInWithGoogle = async () => {
         try {
-            const { user } = await signInWithGooglePopup();
-            console.log(user);
-
-            await createUserDocumentFromAuth(user);
+            await signInWithGooglePopup();
         } catch (error) {
             console.error('Error has occured during google login session: ', error);
         }
@@ -39,8 +36,8 @@ const SignInForm = () => {
         event.preventDefault();
 
         try {
-            const response = await signInAuthUserWithEmailAndPassword(email, password);
-            console.log(response);
+            await signInAuthUserWithEmailAndPassword(email, password);
+
             resetFormFields();
         } catch (error) {
             if (error.code === 'auth/invalid-credential') {
