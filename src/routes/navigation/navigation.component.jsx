@@ -18,7 +18,7 @@ const Navigation = () => {
         <>
             <div className="navigation">
                 <Link className="logo-container" to="/">
-                    <img className="logo" src="crown.svg" alt="Logo" />
+                    <img className="logo" src="/crown.svg" alt="Logo" />
                 </Link>
                 <div className="nav-links-container">
                     <Link className="nav-link" to="/shop">

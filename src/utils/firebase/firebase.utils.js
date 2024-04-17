@@ -8,7 +8,7 @@ import {
     signOut,
     onAuthStateChanged,
 } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc, collection, writeBatch } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDocs } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,
@@ -46,6 +46,22 @@ export const addCollectionAndDocuments = async (collectionKey, objects) => {
 
     await batch.commit();
     console.log('Successfully uploaded SHOP_DATA to the Firestore Database...');
+};
+
+export const getCategoriesAndDocuments = async () => {
+    const collectionRef = collection(db, 'categories');
+    const categoryQuery = query(collectionRef);
+
+    const querySnapshop = await getDocs(categoryQuery);
+
+    const categoryMap = querySnapshop.docs.reduce((accumulator, docSnapshot) => {
+        const { title, items } = docSnapshot.data();
+        accumulator[title.toLowerCase()] = items;
+
+        return accumulator;
+    }, {});
+
+    return categoryMap;
 };
 
 export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
