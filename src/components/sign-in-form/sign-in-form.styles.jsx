@@ -1,4 +1,6 @@
-.sign-up-container {
+import styled from 'styled-components';
+
+export const SignInContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -11,11 +13,10 @@
         text-align: center;
         font-size: 1.275rem;
     }
-
-    .google-sign-in {
-        display: flex;
-        justify-content: center;
+    form {
+        display: grid;
+        grid-template-columns: auto;
         align-items: center;
-        gap: .725rem;
+        grid-template-rows: repeat(5, 1fr);
     }
-}
+`;
