@@ -8,7 +8,7 @@ export const CategoriesContext = createContext({
     categoriesMap: {},
 });
 
-export const CategoriesProvider = ({ children }) => {
+const CategoriesProvider = ({ children }) => {
     const [categoriesMap, setCategoriesMap] = useState({});
 
     /**
@@ -27,3 +27,5 @@ export const CategoriesProvider = ({ children }) => {
 
     return <CategoriesContext.Provider value={value}>{children}</CategoriesContext.Provider>;
 };
+
+export default CategoriesProvider;

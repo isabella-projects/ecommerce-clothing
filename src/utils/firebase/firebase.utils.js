@@ -72,7 +72,7 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInformation
 
     console.log(userDocRef);
     console.log(userSnapshot);
-    console.log(userSnapshot.exists());
+    console.log('Registered: ', userSnapshot.exists());
 
     if (!userSnapshot.exists()) {
         const { displayName, email } = userAuth;
