@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from 'react';
 
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 
 import ProductCard from '../../components/product-card/product-card.component';
 
@@ -14,6 +14,10 @@ const Category = () => {
     const { categoriesMap } = useContext(CategoriesContext);
 
     const [products, setProducts] = useState(categoriesMap[category]);
+
+    if (!categoriesMap[category]) {
+        return <Navigate to="/shop" />;
+    }
 
     useEffect(() => {
         setProducts(categoriesMap[category]);
